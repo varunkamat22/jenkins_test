@@ -1,0 +1,1 @@
+mvn clean install; docker build -t dockerdemo/hello-app .;docker-compose up -d;

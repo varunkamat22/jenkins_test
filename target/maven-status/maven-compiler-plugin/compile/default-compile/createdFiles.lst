@@ -1,0 +1,5 @@
+com/example/dockerdemo/repository/ContactRepository.class
+com/example/dockerdemo/entities/Contact.class
+com/example/dockerdemo/DockerdemoApplication.class
+com/example/dockerdemo/WelcomeController.class
+com/example/dockerdemo/controller/ContactController.class

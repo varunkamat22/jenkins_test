@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  mysql:
+    restart: always
+    container_name: dockerdemo-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: dockerdemo
+      MYSQL_ROOT_PASSWORD: Welcome1
+    volumes:
+      - dockerdemo-mysql-data:/var/lib/mysql
+  dockerdemo-app:
+    container_name: dockerdemo-app
+    image: dockerdemo/hello-app
+    ports:
+      - 8085:8080
+      - 5005:5005
+    depends_on:
+      - mysql
+
+volumes:
+  dockerdemo-mysql-data:
+
+
